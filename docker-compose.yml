@@ -5,8 +5,6 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: pma
-    links:
-      - db
     environment:
       PMA_HOST: localhost
       PMA_PORT: 3306
@@ -14,5 +12,3 @@ services:
     restart: always
     ports:
       - 8081:80
-volumes:
-  dbdata:
